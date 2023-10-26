@@ -1,11 +1,11 @@
-import {View, Image, Dimensions, Text, StyleSheet} from 'react-native';
 import React from 'react';
-const {height, width} = Dimensions.get('window');
-import {color} from '../constants/color';
-import CustomButton from './CustomButton';
+import { Dimensions, Image, StyleSheet, Text, View } from 'react-native';
+import { color } from '../constants/color';
 import BarComponent from './BarComponent';
+import CustomButton from './CustomButton';
+const {height, width} = Dimensions.get('window');
 
-export default function GamesCard({ openBottomSheet }) {
+export default function GamesCard({openBottomSheet}) {
   return (
     <View>
       <View style={styles.card}>
@@ -88,19 +88,19 @@ export default function GamesCard({ openBottomSheet }) {
 
         {/* prize details section */}
         <View style={styles.prizeSection}>
-          <View style={{alignItems:"flex-start"}}>
+          <View style={{alignItems: 'flex-start'}}>
             <Text style={styles.prizeLabel}>Prize Pool</Text>
             <Text style={styles.prizeReward}>$12,000</Text>
           </View>
-          <View style={{alignItems:"center"}}>
+          <View style={{alignItems: 'center'}}>
             <Text style={styles.prizeLabel}>Under</Text>
             <Text style={styles.prizeReward}>3.25x</Text>
           </View>
-          <View style={{alignItems:"center"}}>
+          <View style={{alignItems: 'center'}}>
             <Text style={styles.prizeLabel}>Over</Text>
             <Text style={styles.prizeReward}>1.25x</Text>
           </View>
-          <View >
+          <View>
             <Text style={styles.prizeLabel}>Entry Fees</Text>
             <View style={{justifyContent: 'flex-end', flexDirection: 'row'}}>
               <Text style={styles.prizeReward}>5</Text>
@@ -124,7 +124,7 @@ export default function GamesCard({ openBottomSheet }) {
           </Text>
           <View style={styles.predictionButtonSection}>
             <CustomButton
-            onPress={openBottomSheet}
+              onPress={openBottomSheet}
               title="Under"
               color={color.secondaryButtonColor}
               image={require('../assets/icons/down.png')}
@@ -156,6 +156,7 @@ export default function GamesCard({ openBottomSheet }) {
               <Text style={{fontSize: 16, fontWeight: '500'}}>355 Players</Text>
             </View>
             {/* players label */}
+
             {/* view chart label */}
             <View style={{flexDirection: 'row', alignItems: 'center'}}>
               <Image
@@ -175,7 +176,7 @@ export default function GamesCard({ openBottomSheet }) {
 
           {/* progress bar */}
           <View>
-          <BarComponent percentage1={70} percentage2={30} />
+            <BarComponent percentage1={70} percentage2={30} />
           </View>
           {/* progress bar */}
 
@@ -183,14 +184,16 @@ export default function GamesCard({ openBottomSheet }) {
           <View style={styles.chartSectionTopRow}>
             {/* players label */}
             <View>
-              <Text style={{fontSize: 14, letterSpacing:0.3, fontWeight: '300'}}>
+              <Text
+                style={{fontSize: 14, letterSpacing: 0.3, fontWeight: '300'}}>
                 232 Predicted under
               </Text>
             </View>
             {/* players label */}
             {/* view chart label */}
             <View>
-              <Text style={{fontSize: 14, letterSpacing:0.3, fontWeight: '300'}}>
+              <Text
+                style={{fontSize: 14, letterSpacing: 0.3, fontWeight: '300'}}>
                 123 Predicted above
               </Text>
             </View>
@@ -214,7 +217,6 @@ const styles = StyleSheet.create({
     borderWidth: 0.5,
   },
   topRowContainer: {
-    // paddingHorizontal: 12,
     backgroundColor: color.primaryColor,
     overflow: 'hidden',
   },
@@ -265,13 +267,14 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   chartSection: {
-    margin: 15,
+    padding: 15,
+    backgroundColor: '#f6f3fa',
   },
   chartSectionTopRow: {
     flexDirection: 'row',
-    backgroundColor:"#f7f7f7f",
+    backgroundColor: '#f6f3fa',
     paddingHorizontal: 5,
-    marginVertical:10,
+    marginVertical: 10,
     justifyContent: 'space-between',
   },
 });
