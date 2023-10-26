@@ -2,7 +2,7 @@
 
 ## Overview
 
-Test App is a UI test app of interview using React Native CLI
+Test App is a UI test app for an interview round using React Native CLI
 
 ## Steps to setup
 
