@@ -4,9 +4,7 @@
 
 Test App is a UI test app of interview using React Native CLI
 
-## Installation
-
-1. **Mobile App:**
+## Steps to setup
 
    - Clone the repository:
      ```bash
